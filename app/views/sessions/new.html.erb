@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <p class="new">ログイン</p>
+    <div class="device-inner">
+      <%= form_for(:session, url: login_path) do |f| %>
+
+      <span class="require"></span>
+      <%= f.email_field :email, class: 'form-control', placeholder: "メールアドレス" %>
+
+      <span class="require"></span>
+      <%= f.password_field :password, class: 'form-control', placeholder: "パスワード" %>
+
+      <%= f.submit 'ログインする', class: "btn btn-blue submit" %>
+
+      <%= link_to "新しいアカウントを作成", signup_path, class: "page-mo" %>
+      <% end %>
+    </div>
+  </div>
+</div>

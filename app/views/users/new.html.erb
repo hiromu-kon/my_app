@@ -1,0 +1,23 @@
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <p class="new">新しいアカウントを作成</p>
+    <div class="device-inner">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class="form">
+      <span class="require"></span><%= f.text_field :name, class: 'form-control', placeholder: "ユーザー名" %>
+
+      <span class="require"></span><%= f.email_field :email, class: 'form-control require', placeholder: "メールアドレス" %>
+
+      <span class="require"></span><%= f.password_field :password, class: 'form-control', placeholder: "パスワード" %>
+
+      <span class="require"></span><%= f.password_field :password_confirmation, class: 'form-control', placeholder: "パスワード確認" %>
+
+      <%= f.submit "新しいアカウントを作成", class: "btn btn-blue submit" %>
+    <% end %>
+
+    <%= link_to "すでにアカウントをお持ちの方はログイン", login_path, class: "page-mo" %>
+  </div>
+</div>
+</div>

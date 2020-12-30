@@ -1,0 +1,54 @@
+<div class="row-1">
+  <div class="room-nav">
+    <ul>
+      <li class="active">
+        <h5>基本情報</h5>
+      </li>
+    </ul>
+  </div>
+  <div class="room-view">
+    <div class="room-view-box">
+      <%= form_for(@room) do |f| %>
+      <div class="update-content">
+        <div class="row-1">
+          <h5>ルーム情報登録</h5>
+        </div>
+      </div>
+      <div class="update-content">
+        <div class="row-1">
+          <label class="require">ルーム名</label>
+          <%= f.text_field :name, class: 'form-control room-form', placeholder: "ルーム名を入力" %>
+        </div>
+      </div>
+      <div class="update-content">
+        <div class="row-1">
+          <label class="require">ルーム紹介</label>
+          <%= f.text_area :content, class: 'form-control room-form', placeholder: "ルーム説明を入力" %>
+        </div>
+      </div>
+      <div class="update-content">
+        <div class="row-1">
+          <label class="require">料金</label>
+          <%= f.number_field :cost, class: 'form-control room-form', placeholder: "一日あたりの料金を入力" %>
+        </div>
+      </div>
+      <div class="update-content">
+        <div class="row-1">
+          <label class="require">住所</label>
+          <%= f.text_field :address, class: 'form-control room-form', placeholder: "住所を入力" %>
+        </div>
+      </div>
+      <div class="update-content">
+        <div class="row-1">
+          <label class="require">ルーム画像</label>
+          <%= f.file_field :image %>
+        </div>
+      </div>
+      <div class="update-content">
+        <%= f.submit "登録", class: "btn btn-blue" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>
