@@ -1,0 +1,42 @@
+<div class="main">
+
+<div class="container">
+ <div class="row-1 top-search">
+   <div class="form-fream">
+     <div class="form-area">
+       <p class="form-area-title">Potepan Shareでまだ体験したことのない旅をしよう</p>
+       <%= search_form_for @search, url: rooms_path do |f| %>
+        <label class="area">エリア</label>
+         <%= f.search_field :address_cont, :placeholder => "東京", class:'form-control' %>
+         <%= f.submit "探す", class: "btn btn-blue submit"%>
+       <% end %>
+     </div>
+   </div>
+ </div>
+
+</div>
+
+</div>
+
+
+<div class="container">
+  <h1 class="top-title">おすすめエリア</h1>
+  <div class="row-1">
+    <div class="item-list col-6">
+      <span class="list">東京</span>
+        <%= link_to image_tag('img_tokyo.png', class: "panel-image"),{:controller=>"rooms",:action=>"index",:q=>{:address_cont=>'東京'}} %>
+      </div>
+      <div class="item-list col-6">
+      <span class="list">京都</span>
+        <%= link_to image_tag('img_kyoto.png', class: "panel-image"),{:controller=>"rooms",:action=>"index",:q=>{:address_cont=>'京都'}} %>
+      </div>
+      <div class="item-list col-6">
+      <span class="list">大阪</span>
+        <%= link_to image_tag('img_osaka.png', class: "panel-image"),{:controller=>"rooms",:action=>"index",:q=>{:address_cont=>'大阪'}} %>
+      </div>
+      <div class="item-list col-6">
+      <span class="list">札幌</span>
+        <%= link_to image_tag('img_sapporo.png', class: "panel-image"),{:controller=>"rooms",:action=>"index",:q=>{:address_cont=>'札幌'}} %>
+    </div>
+    </div>
+    </div>

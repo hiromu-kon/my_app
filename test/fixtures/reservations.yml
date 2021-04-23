@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  room_id: 1
+  start_date: 2020-12-17
+  finish_date: 2020-12-17
+
+two:
+  user_id: 1
+  room_id: 1
+  start_date: 2020-12-17
+  finish_date: 2020-12-17

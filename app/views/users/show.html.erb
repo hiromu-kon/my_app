@@ -1,0 +1,32 @@
+<div class="row-1">
+  <div class="user-nav">
+    <ul>
+        <li class="active"><%= link_to "アカウント",'#'%></li>
+        <li class=""><%= link_to "プロフィール", profile_user_path(current_user) %></li>
+    </ul>
+</div>
+<div class="user-view">
+  <div class="user-view-box">
+    <div class="update-content">
+      <div class="row-1">
+        <h5>アカウント</h5>
+      </div>
+    </div>
+<div class="update-content">
+  <div class="row-1">
+    <label class="label-column">メールアドレス</label>
+    <div class="column"><%= @user.email %></div>
+  </div>
+</div>
+<div class="update-content">
+  <div class="row-1">
+    <label class="label-column">パスワード</label>
+    <div class="column">*********</div>
+  </div>
+</div>
+<div class="update-content">
+<p><%= link_to '編集', edit_user_path(current_user), class:"btn btn-blue" %></p>
+</div>
+</div>
+</div>
+</div>

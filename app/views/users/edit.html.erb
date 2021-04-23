@@ -1,0 +1,21 @@
+<div class="flame">
+  <h2>アカウント編集</h2>
+
+  <div class="inner">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <label class="label-a">メールアドレス</label>
+      <%= f.text_field :email, placeholder: "メールアドレスを入力してください", class:"form-control" %>
+      <label class="label-a">変更後パスワード（変更する場合のみ入力）</label>
+      <%= f.password_field :password, class:"form-control"%>
+      <label class="label-a">パスワード確認用（変更する場合のみ入力）</label>
+      <%= f.password_field :password_confirmation, class:"form-control" %>
+      <label class="label-a">現在のパスワード</label>
+      <%= password_field_tag :current_password, params[:current_password], placeholder: "現在のパスワードを入力してください", class:"form-control" %>
+
+      <%= f.submit "更新", class: "btn btn-blue submit" %>
+      <%= link_to "戻る", current_user, class: "btn btn-back submit" %>
+    <% end %>
+
+  </div>
+</div>
